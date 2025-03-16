@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:orientation="vertical"
+                android:paddingTop="20dp"
+                android:paddingHorizontal="20dp"
+                android:background="@drawable/upper_background_home">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Grocery List"
+                    android:layout_marginTop="24dp"
+                    android:textColor="@color/white"
+                    android:textSize="38dp" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/addItemToListButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:drawableStart="@drawable/add_circle_black_outline_icon"
+                android:text="ADD ITEM TO LIST"
+                android:drawablePadding="12dp"
+                android:fontFamily="@font/poppins_bold"
+                android:background="@drawable/search_bar_background"
+                android:elevation="8dp"
+                android:layout_margin="16dp"
+                android:layout_gravity=""
+                android:padding="10dp"
+                />
+            <Button
+                android:id="@+id/clearListBtn"
+                android:layout_width="90dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:text="Clear List"
+                android:textSize="8sp"
+                android:fontFamily="@font/poppins_bold"
+                android:layout_marginEnd="16dp"
+                tools:ignore="SmallSp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="60dp">
+
+                <!-- Existing ProgressBar, Empty List Message, and Grocery List RecyclerView -->
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/emptyGroceryListMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="100dp"
+                    android:layout_gravity="center"
+                    android:text="Empty Grocery List"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:visibility="gone" />
+
+                <!-- Existing Grocery List RecyclerView -->
+                <TextView
+                    android:id="@+id/toBuyListLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="To Buy"
+                    android:textSize="24sp"
+                    android:padding="8dp"
+                    android:visibility="gone"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:listitem="@layout/item_ingredients"
+                    android:visibility="gone"/>
+
+                <!-- New Completed List RecyclerView -->
+                <TextView
+                    android:id="@+id/completedListLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Completed Items"
+                    android:textSize="24sp"
+                    android:padding="8dp"
+                    android:visibility="gone" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/completedRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:listitem="@layout/item_ingredients"
+                    android:visibility="gone" />
+                <Button
+                    android:id="@+id/clearCompletedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CLEAR"
+                    android:fontFamily="@font/poppins_bold"
+                    android:layout_gravity="center"
+                    android:visibility="gone"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

@@ -1,0 +1,26 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/edittext_border"
+    android:padding="10dp">
+
+    <EditText
+        android:id="@+id/instructionEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:hint="Enter instruction"
+        android:background="@drawable/blank_white"
+        android:fontFamily="@font/poppins_light"
+        android:textSize="18sp" />
+
+    <ImageButton
+        android:id="@+id/removeInstructionButton"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@drawable/delete_icon_dark"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="8dp"/>
+</LinearLayout>

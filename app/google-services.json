@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "624138817949",
+    "firebase_url": "https://budgetary-meal-planner-app-default-rtdb.firebaseio.com",
+    "project_id": "budgetary-meal-planner-app",
+    "storage_bucket": "budgetary-meal-planner-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:624138817949:android:9daa38167e57487b021f74",
+        "android_client_info": {
+          "package_name": "com.example.mealkit"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrTu-O3AKRf5WJjkC5ByTX7hTXZ288hkA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:624138817949:android:68e09bd19d5effcb021f74",
+        "android_client_info": {
+          "package_name": "com.musca.recipemealplannerapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrTu-O3AKRf5WJjkC5ByTX7hTXZ288hkA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

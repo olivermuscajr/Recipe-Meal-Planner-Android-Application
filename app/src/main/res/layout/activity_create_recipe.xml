@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/green"
+            android:gravity="center_vertical"
+            android:paddingStart="8dp">
+            <ImageButton
+                android:id="@+id/backButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="4dp"
+                android:background="@drawable/background_transparent"
+                android:src="@drawable/backrecipebutton" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create Recipe"
+                android:layout_marginStart="8dp"
+                android:textSize="24sp"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:includeFontPadding="false"
+                android:fontFamily="@font/poppins_bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/gray"
+            android:padding="16dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Recipe Name"
+                android:textSize="16sp"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_marginTop="16dp" />
+
+            <EditText
+                android:id="@+id/recipeNameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:paddingStart="8dp"
+                android:background="@drawable/edittext_border"
+                android:hint="Type your Recipe name here"
+                android:inputType="text"
+                android:textSize="16sp"
+                android:fontFamily="@font/poppins_light"
+                android:maxLines="1"
+                android:imeOptions="actionDone"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:textSize="16sp"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_marginTop="16dp" />
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_border"
+                android:padding="5dp">
+                <EditText
+                    android:id="@+id/descriptionEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Enter instruction"
+                    android:background="@drawable/blank_white"
+                    android:fontFamily="@font/poppins_light"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+
+
+            <!-- Add Cover Image -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add Cover Image (Optional)"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                app:cardCornerRadius="12dp">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/upload_image"
+                        android:background="@android:color/darker_gray"
+                        android:contentDescription="Selected Image" />
+                    <ImageButton
+                        android:id="@+id/removeImageButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|end"
+                        android:layout_margin="8dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/cross_icon_button"
+                        android:background="@android:color/transparent"
+                        android:visibility="gone"/>
+                </FrameLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Meal Type Dropdown -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Meal Type"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_border">
+                <Spinner
+                    android:id="@+id/mealTypeSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:paddingStart="8dp"/>
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Serving Size"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_border">
+                <Spinner
+                    android:id="@+id/servingSizeSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:paddingStart="8dp"/>
+            </LinearLayout>
+            <!-- Ingredients Section -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ingredients"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp" />
+            <LinearLayout
+                android:id="@+id/ingredientsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp">
+
+            </LinearLayout>
+            <Button
+                android:id="@+id/addIngredientButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Ingredient"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center_horizontal"/>
+            <!-- Instructions Section -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Instructions (Optional)"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_marginTop="16dp" />
+            <LinearLayout
+                android:id="@+id/instructionsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp">
+
+            </LinearLayout>
+            <Button
+                android:id="@+id/addInstructionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Instruction"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center_horizontal" />
+            <!-- Save Recipe Button -->
+            <Button
+                android:id="@+id/saveRecipeButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Save Recipe"
+                android:layout_marginTop="16dp" />
+            <ProgressBar
+                android:id="@+id/uploadProgressBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:visibility="gone" />
+        </LinearLayout>
+        <!-- Recipe Name -->
+
+
+    </LinearLayout>
+</ScrollView>

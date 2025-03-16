@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="#E7E7E7">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:background="@drawable/upper_background_home">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageButton
+                        android:id="@+id/backButton"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_margin="4dp"
+                        android:background="@drawable/background_transparent"
+                        android:src="@drawable/backrecipebutton" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Search Recipe"
+                        android:layout_marginStart="8dp"
+                        android:textSize="24sp"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:includeFontPadding="false"
+                        android:fontFamily="@font/poppins_bold"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+            <EditText
+                android:id="@+id/searchBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/search_bar_background"
+                android:drawableStart="@drawable/search_icon"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/poppins_light"
+                android:hint="Search recipes"
+                android:inputType="text"
+                android:padding="8dp"
+                android:paddingStart="12dp"
+                android:textColor="@color/black"
+                android:textColorHint="#464646"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end">
+
+            <TextView
+                android:id="@+id/searchByIngredient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginRight="16dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Search by Ingredient"
+                android:contextClickable="true"
+                android:textAppearance="@style/Widget.AppCompat.Spinner.Underlined"
+                android:textColor="@color/black"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/search_recipe_item"/>
+        <TextView
+            android:id="@+id/noSearchResultText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:text="No results found"
+            android:textColor="@color/black"
+            android:visibility="gone"
+            android:fontFamily="@font/poppins_bold"
+            android:textSize="16sp" />
+
+        <!-- Add RecyclerView or other UI elements to display search results -->
+    </LinearLayout>
+</LinearLayout>

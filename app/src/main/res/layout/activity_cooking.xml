@@ -1,0 +1,142 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/green"
+        android:gravity="center_vertical"
+        android:paddingStart="8dp">
+        <ImageButton
+            android:id="@+id/backmenuButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/background_transparent"
+            android:src="@drawable/backrecipebutton" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cook Now"
+            android:layout_marginStart="8dp"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:includeFontPadding="false"
+            android:fontFamily="@font/poppins_bold"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+        <ImageButton
+            android:id="@+id/helpButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/help_icon"
+            android:background="@drawable/background_transparent"/>
+    </LinearLayout>
+
+    <!-- ImageView for Instruction Image -->
+    <ImageView
+        android:id="@+id/instructionImageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:contentDescription="Instruction Image" />
+
+    <TextView
+        android:id="@+id/stepLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Step 1 of 10"
+        android:textSize="10dp"
+        android:textAlignment="center"
+        android:fontFamily="@font/poppins_light"
+        android:padding="8dp"
+        android:layout_marginTop="8dp"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:progressTint="@color/green"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="0"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/instructionTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Step 1"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="18sp"
+        android:padding="8dp" />
+    <ImageButton
+        android:id="@+id/ttsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Read Aloud"
+        android:src="@drawable/audio_icon"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/background_transparent"
+        android:layout_gravity="center_horizontal" />
+
+    <!-- Text for no image available -->
+    <TextView
+        android:id="@+id/noImageTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No Image Available"
+        android:visibility="gone"
+        android:textColor="#FF0000"
+        android:textSize="16sp"
+        android:paddingTop="8dp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:layout_gravity="center">
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:layout_marginRight="280dp"
+            android:background="@drawable/background_transparent"
+            android:src="@drawable/back_icon2"
+            android:layout_gravity="center_horizontal"
+            android:padding="6dp"/>
+
+        <ImageButton
+            android:id="@+id/nextStepButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="Next Step"
+            android:background="@drawable/background_transparent"
+            android:src="@drawable/next_icon"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/timerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Timer"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"
+        android:layout_gravity="center_horizontal"/>
+
+
+
+</LinearLayout>

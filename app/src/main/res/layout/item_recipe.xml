@@ -1,0 +1,73 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10sp"
+    android:elevation="8sp"
+    app:cardCornerRadius="14dp"
+    android:foreground="@drawable/ripple_effect">
+    <ImageView
+        android:id="@+id/recipeImageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/logo"
+        android:background="@android:color/darker_gray"
+        android:contentDescription="Recipe Image" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top">
+        <ImageButton
+            android:id="@+id/deleteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/delete_icon"
+            android:contentDescription="Delete Recipe"
+            android:background="@drawable/background_transparent"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="10dp"
+            android:padding="4dp"
+            android:elevation="4sp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+        <TextView
+            android:id="@+id/recipeNameTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/recipeImageView"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:shadowColor="@color/black"
+            android:paddingStart="16dp"
+            android:shadowRadius="20"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/mealTypeTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/recipeNameTextView"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:paddingStart="16dp"
+            android:shadowColor="@color/black"
+            android:shadowRadius="20"
+            tools:ignore="RtlSymmetry" />
+
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
